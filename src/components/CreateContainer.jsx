@@ -31,8 +31,8 @@ const CreateContainer = () => {
   const [alertStatus, setAlertStatus] = useState("danger");
   const [msg, setMsg] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
-  // const [{ foodItems }, dispatch] = useStateValue();
-  const [dispatch] = useStateValue();
+  const [{ foodItems }, dispatch] = useStateValue();
+  // const [dispatch] = useStateValue();
 
   const uploadImage = (e) => {
     setIsLoading(true);
@@ -111,11 +111,11 @@ const CreateContainer = () => {
         setIsLoading(false);
         setFields(true);
         setMsg("Data Uploaded successfully 😊");
+        clearData();
         setAlertStatus("success");
         setTimeout(() => {
           setFields(false);
         }, 4000);
-        clearData();
       }
     } catch (error) {
       console.log(error);
@@ -171,7 +171,7 @@ const CreateContainer = () => {
             required
             value={title}
             onChange={(e) => setTitle(e.target.value)}
-            placeholder="Give me a title..."
+            placeholder="Título del producto..."
             className="w-full h-full text-lg bg-transparent outline-none border-none placeholder:text-gray-400 text-textColor"
           />
         </div>
@@ -181,7 +181,7 @@ const CreateContainer = () => {
             className="outline-none w-full text-base border-b-2 border-gray-200 p-2 rounded-md cursor-pointer"
           >
             <option value="other" className="bg-white">
-              Select Category
+              Seleccionar Categoría
             </option>
             {categories &&
               categories.map((item) => (
@@ -206,7 +206,7 @@ const CreateContainer = () => {
                     <div className="w-full h-full flex flex-col items-center justify-center gap-2">
                       <MdCloudUpload className="text-gray-500 text-3xl hover:text-gray-700" />
                       <p className="text-gray-500 hover:text-gray-700">
-                        Click here to upload
+                        Click acá para cargar imágen
                       </p>
                     </div>
                     <input
@@ -247,7 +247,7 @@ const CreateContainer = () => {
               required
               value={calories}
               onChange={(e) => setCalories(e.target.value)}
-              placeholder="Calories"
+              placeholder="Calorías"
               className="w-full h-full text-lg bg-transparent outline-none border-none placeholder:text-gray-400 text-textColor"
             />
           </div>
@@ -259,7 +259,7 @@ const CreateContainer = () => {
               required
               value={price}
               onChange={(e) => setPrice(e.target.value)}
-              placeholder="Price"
+              placeholder="Precio"
               className="w-full h-full text-lg bg-transparent outline-none border-none placeholder:text-gray-400 text-textColor"
             />
           </div>
@@ -270,7 +270,7 @@ const CreateContainer = () => {
             className="ml-0 md:ml-auto w-full md:w-auto border-none outline-none bg-emerald-500 px-12 py-2 rounded-lg text-lg text-white font-semibold"
             onClick={saveDetails}
           >
-            Save
+            Guardar
           </button>
         </div>
       </div>
