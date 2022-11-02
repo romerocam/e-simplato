@@ -69,9 +69,11 @@ const Header = () => {
             exit={{ opacity: 0, x: 200 }}
             className="flex items-center gap-24 "
           >
+            <Link to={"/"}>
             <li className="text-lg text-textColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer">
               Home
             </li>
+            </Link>
             <li className="text-lg text-textColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer">
               Menú
             </li>
@@ -100,7 +102,7 @@ const Header = () => {
           <div className="relative">
             <motion.img
               whileTap={{ scale: 0.6 }}
-              src={user ? isoLogo : Avatar}
+              src={user ? Avatar : isoLogo}
               className="w-10 min-w-[40px] h-10 min-h-[40px] drop-shadow-xl cursor-pointer rounded-full"
               alt="userprofile"
               onClick={login}

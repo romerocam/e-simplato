@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import HomeContainer from "./HomeContainer";
 import MenuContainer from "./MenuContainer";
-// import CartContainer from "./CartContainer";
+import CartContainer from "./CartContainer";
 import { motion } from "framer-motion";
 import { MdChevronLeft, MdChevronRight } from "react-icons/md";
 import RowContainer from "./RowContainer";
@@ -46,7 +46,7 @@ const MainContainer = () => {
       </section>
       <MenuContainer />
 
-      {/* {cartShow && <CartContainer />} */}
+      {cartShow && <CartContainer />}
     </div>
   );
 };
