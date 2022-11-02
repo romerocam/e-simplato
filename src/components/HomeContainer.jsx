@@ -1,6 +1,7 @@
 import React from "react";
 import Delivery from "../img/delivery.png";
-import HeroBg from "../img/heroBg.png";
+// import HeroBg from "../img/heroBg.png";
+import isoLogo from "../img/isologosimplato.png";
 import { heroData } from "../utils/data";
 
 const HomeContainer = () => {
@@ -18,7 +19,7 @@ const HomeContainer = () => {
           </div>
         </div>
         <p className="text-[2.5rem] lg:text-[4.5rem] font-bold tracking-wide text-headingColor">
-          Programa tu entrega{" "}
+          Programá tu entrega{" "}
           <span className="text-red-500 text-[2.5rem] lg:text-[4.5rem]">
             para cuando quieras.
           </span>
@@ -38,9 +39,9 @@ const HomeContainer = () => {
       </div>
       <div className="py-2 flex-1 flex items-center relative">
       <img
-          src={HeroBg}
-          className=" ml-auto h-420 w-full lg:w-auto lg:h-650"
-          alt="hero-bg"
+          src={isoLogo}
+          className=" ml-auto h-420 w-full lg:w-auto lg:h-650 opacity-20"
+          alt="logo simplato"
         />
         <div className="w-full h-full absolute top-0 left-0 flex items-center justify-center lg:px-32  py-4 gap-4 flex-wrap">
           {heroData &&
