@@ -1,6 +1,6 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import HomeContainer from "./HomeContainer";
-// import MenuContainer from "./MenuContainer";
+import MenuContainer from "./MenuContainer";
 // import CartContainer from "./CartContainer";
 import { motion } from "framer-motion";
 import { MdChevronLeft, MdChevronRight } from "react-icons/md";
@@ -17,7 +17,7 @@ const MainContainer = () => {
       <HomeContainer />
       <section className="w-full my-6">
         <div className="w-full flex items-center justify-between">
-          <p className="text-2xl font-semibold capitalize text-headingColor relative before:absolute before:rounded-lg before:content before:w-32 before:h-1 before:-bottom-2 before:left-0 before:bg-gradient-to-tr from-orange-400 to-orange-600 transition-all ease-in-out duration-100">
+          <p className="text-2xl font-semibold capitalize text-headingColor relative before:absolute before:rounded-lg before:content before:w-32 before:h-1 before:-bottom-2 before:left-0 before:bg-gradient-to-tr from-red-600 to-red-300 transition-all ease-in-out duration-100">
             Los más populares!
           </p>
 
@@ -44,9 +44,9 @@ const MainContainer = () => {
           data={foodItems?.filter((n) => n.category === "carne")}
         />
       </section>
-      {/* <MenuContainer />
+      <MenuContainer />
 
-      {cartShow && <CartContainer />} */}
+      {/* {cartShow && <CartContainer />} */}
     </div>
   );
 };
