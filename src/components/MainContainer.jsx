@@ -13,7 +13,7 @@ const MainContainer = () => {
 
   useEffect(() => {}, [scrollValue, cartShow]);
   return (
-    <div className="w-full h-auto flex flex-col items-center justify-center">
+    <div className="w-full h-auto flex flex-col items-center justify-center cos">
       <HomeContainer />
       <section className="w-full my-6">
         <div className="w-full flex items-center justify-between">
