@@ -33,7 +33,7 @@ const App = () => {
           </Routes>
         </main>
       </div>
-    </AnimatePresence >
+    </AnimatePresence>
   );
 };
 
